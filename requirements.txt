@@ -1,0 +1,5 @@
+# Python dotenv
+python-dotenv==1.0.1
+
+# Django framework
+Django==5.0.6

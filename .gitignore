@@ -1,0 +1,15 @@
+# Virtual Environment
+.venv/
+venv/
+
+# Pycache
+__pycache__/
+
+# Environment file
+.env
+
+# Logging file
+logs/
+
+# Database SQLite3
+databases/
