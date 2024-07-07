@@ -6,6 +6,11 @@ Language | Framework | Database
 Python3 | Django5 | Sqlite3
 
 ### Start project
+* Install dependencies
+    ```bash
+    pip install -r requirements.txt
+    ```
+
 * Copy environment variables file
     ```bash
     cp .env.example .env
