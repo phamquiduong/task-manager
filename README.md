@@ -1,4 +1,4 @@
-## Coffee manager project
+## Task manager project
 
 ### Development
 Language | Framework | Database
