@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 databases = Databases()
 DATABASES = databases.get_databases()
-
+DATABASE_ROUTERS = databases.get_routers()
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
