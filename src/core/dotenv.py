@@ -1,4 +1,5 @@
 from pathlib import Path
+from time import sleep
 
 from django.conf import settings
 from dotenv import load_dotenv
@@ -13,4 +14,6 @@ class DotEnv:
         self.dotenv_dir.mkdir(parents=True, exist_ok=True)
 
     def load(self, dotenv_file_name: str = '.env'):
-        return load_dotenv(self.dotenv_dir / dotenv_file_name)
+        while not load_dotenv(self.dotenv_dir / dotenv_file_name):
+            print('Load environment file failed. Will try after 5 seconds..')
+            sleep(5)
