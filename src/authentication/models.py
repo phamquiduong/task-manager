@@ -1,3 +1,4 @@
+from django.contrib.auth.hashers import make_password
 from django.db import models
 
 
@@ -7,10 +8,14 @@ class User(models.Model):
 
     email = models.EmailField(max_length=255, unique=True)
     full_name = models.CharField(max_length=255)
-    avatar_key = models.UUIDField()
+    avatar_key = models.UUIDField(null=True, blank=True)
 
     class Meta:
         db_table = 'users'
+
+    def save(self, *args, **kwargs) -> None:
+        self.password = make_password(self.password)
+        return super().save(*args, **kwargs)
 
 
 class UserTemp(models.Model):
