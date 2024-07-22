@@ -1,16 +1,21 @@
 @echo off
 
+
 echo ----------------------------------------------------
 echo             Install all pip packages
 echo ----------------------------------------------------
 pip install -r requirements.txt
 
+
 cd src
+
 
 echo ----------------------------------------------------
 echo                   Run migrate
 echo ----------------------------------------------------
 python manage.py migrate
+python .\manage.py migrate --database authentication
+
 
 echo ----------------------------------------------------
 echo                    Run server
