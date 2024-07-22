@@ -25,6 +25,15 @@ Python3 | Django5 | Sqlite3
     cd src/
     ```
 
+* Migrate database
+    ```bash
+    python .\manage.py migrate
+    ```
+    ```bash
+    python .\manage.py migrate --database authentication
+    ```
+
+
 * Run server
     ```bash
     python manage.py runserver 0.0.0.0:80
