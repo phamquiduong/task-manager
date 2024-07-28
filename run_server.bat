@@ -13,9 +13,15 @@ cd src
 echo ----------------------------------------------------
 echo                   Run migrate
 echo ----------------------------------------------------
+python manage.py collectstatic --noinput
+
+
+echo ----------------------------------------------------
+echo                   Run migrate
+echo ----------------------------------------------------
 python manage.py migrate
-python .\manage.py migrate --database authentication
-python .\manage.py migrate --database session
+python manage.py migrate --database authentication
+python manage.py migrate --database session
 
 
 echo ----------------------------------------------------
@@ -27,4 +33,4 @@ if "%port%"=="" (
     set port=80
 )
 
-python manage.py runserver 0.0.0.0:%port%
+python manage.py runserver 0.0.0.0:%port% --insecure

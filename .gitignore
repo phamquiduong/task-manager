@@ -13,3 +13,10 @@ logs/
 
 # Database SQLite3
 databases/
+
+# Static files
+statics/
+
+# Docker nginx
+docker/nginx/config/nginx.conf
+docker/nginx/logs/
