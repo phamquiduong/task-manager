@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
     # User app
     'authentication',
+    'session',
 ]
 
 MIDDLEWARE = [

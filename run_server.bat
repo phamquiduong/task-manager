@@ -15,6 +15,7 @@ echo                   Run migrate
 echo ----------------------------------------------------
 python manage.py migrate
 python .\manage.py migrate --database authentication
+python .\manage.py migrate --database session
 
 
 echo ----------------------------------------------------

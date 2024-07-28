@@ -6,7 +6,7 @@ class User(models.Model):
     username = models.CharField(max_length=128, unique=True)
     password = models.CharField(max_length=255)
 
-    email = models.EmailField(max_length=255, unique=True)
+    email = models.EmailField(max_length=255, unique=True, null=True, blank=True)
     full_name = models.CharField(max_length=255)
     avatar_key = models.UUIDField(null=True, blank=True)
 
@@ -33,12 +33,3 @@ class EmailOtp(models.Model):
 
     class Meta:
         db_table = 'email_otps'
-
-
-class UserSession(models.Model):
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    user_agent = models.CharField(max_length=255)
-    expired_datetime = models.DateTimeField()
-
-    class Meta:
-        db_table = 'user_sessions'
