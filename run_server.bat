@@ -11,7 +11,7 @@ cd src
 
 
 echo ----------------------------------------------------
-echo                   Run migrate
+echo              Collect static files
 echo ----------------------------------------------------
 python manage.py collectstatic --noinput
 
